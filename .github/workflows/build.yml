@@ -1,0 +1,58 @@
+name: Build ROG Virtual Console APK
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Assemble Debug APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17 (Eclipse Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.2'
+
+      - name: Make Gradle Wrapper Executable
+        run: |
+          if [ -f gradlew ]; then
+            chmod +x gradlew
+          fi
+
+      - name: Build Debug APK
+        run: |
+          if [ -f gradlew ]; then
+            ./gradlew assembleDebug --stacktrace --no-daemon
+          else
+            gradle assembleDebug --stacktrace --no-daemon
+          fi
+
+      - name: Verify APK Generated
+        run: |
+          echo "Scanning build outputs..."
+          ls -la app/build/outputs/apk/debug/
+
+      - name: Upload Debug APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rog-virtual-console-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          retention-days: 14

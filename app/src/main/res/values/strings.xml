@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ROG Virtual Console</string>
+    <string name="accessibility_service_desc">Enables low-latency virtual gamepad touch mapping and sensitivity-boosted gestures over mobile games.</string>
+    <string name="perm_overlay_title">Screen Overlay Permission</string>
+    <string name="perm_overlay_desc">Required to render transparent HUD, joysticks, and buttons over running games.</string>
+    <string name="perm_accessibility_title">Touch Injection Accessibility</string>
+    <string name="perm_accessibility_desc">Required to synthesize low-latency screen taps and smooth camera swipe strokes.</string>
+    <string name="status_granted">ACTIVE / READY</string>
+    <string name="status_missing">REQUIRED</string>
+    <string name="action_grant">GRANT PERMISSION</string>
+    <string name="action_start_overlay">START OVERLAY HUD</string>
+    <string name="action_stop_overlay">STOP OVERLAY</string>
+    <string name="mode_play">PLAY MODE (LOCKED)</string>
+    <string name="mode_edit">EDIT MODE (DRAGGABLE)</string>
+</resources>

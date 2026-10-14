@@ -1,0 +1,6 @@
+{
+  "name": "ROG Virtual Console Overlay",
+  "description": "Low-latency Floating Virtual Handheld Gamepad & Touch Keymapper Overlay inspired by ASUS ROG Ally console layout and BlueStacks Keymapper mechanics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

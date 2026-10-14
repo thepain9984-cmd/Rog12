@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ROGVirtualConsole" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand colors -->
+        <item name="colorPrimary">@color/rog_red</item>
+        <item name="colorPrimaryVariant">#CC0033</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">@color/rog_cyan</item>
+        <item name="colorSecondaryVariant">#00B4D8</item>
+        <item name="colorOnSecondary">#000000</item>
+        <!-- Status bar and window backgrounds -->
+        <item name="android:statusBarColor">@color/rog_black</item>
+        <item name="android:navigationBarColor">@color/rog_black</item>
+        <item name="android:windowBackground">@color/rog_black</item>
+    </style>
+</resources>
